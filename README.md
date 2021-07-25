@@ -5,7 +5,7 @@
 For most definite integrals, with non-infinite bounds `NumbaQuadpack.dqags` does the same thing as `scipy.integrate.quad`, but NumbaQuadpack is much faster than scipy, because scipy uses the python interpreter to set up the problem. Also, `NumbaQuadpack.dqags` can be called from within numba-jited functions, and scipy's functions can not be.
 
 ## Installation
-`NumbaLSODA` will probably only work on MacOS or Linux. You must have `CMake` and a C compiler. You must also have python >3.6.0 with `numpy` and `numba`.
+`NumbaQuadpack` will probably only work on MacOS or Linux. You must have `CMake` and a C compiler. You must also have python >3.6.0 with `numpy` and `numba`.
 
 After satisfying the dependencies, install with the pip command below
 
