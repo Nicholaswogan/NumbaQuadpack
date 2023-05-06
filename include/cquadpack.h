@@ -1,6 +1,8 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 #include <float.h>
+#include <gsl/gsl_math.h>
+#include <gsl/gsl_sf_log.h>
 
 #include "cquadpack_export.h"
 
@@ -35,6 +37,11 @@ extern "C" {
 #endif /* __cplusplus */
 
 typedef double(*dq_function_type)(double, void*);
+
+/* Log Sum / Diff functions */
+CQUADPACK_EXPORT double logsumexp(double a, double b);
+CQUADPACK_EXPORT double logsubexp(double a, double b);
+#define LOGDIFF(x, y) ((x) < (y) ? logsubexp(y, x) : logsubexp(x, y))
 
 /* Integration routines */
 /* Gauss-Kronrod for integration over finite range. */

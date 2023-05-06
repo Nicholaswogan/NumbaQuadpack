@@ -39,6 +39,8 @@ set(source_files
     src/dqng.c
     src/dqsort.c
     src/dqwgt.c
+    src/logdiff.c
+    src/logsum.c
 )
 set(header_files
     include/cquadpack.h
